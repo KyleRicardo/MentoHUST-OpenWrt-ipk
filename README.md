@@ -29,11 +29,11 @@ git clone https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git
 popd
 ```
 
-克隆该git库之后，就可以开始编译了：
+克隆该git库之后，请再次使用`make menuconfig`，在Network->Ruijie下面找到该软件包，使用M将其指定编译为模块，保存，退出。下面可以开始编译了：
 
  `make package/MentoHUST-OpenWrt-ipk/compile V=s`
 
-如果顺利，编译完成之后就能在`trunk/bin/YourArchitecture/packages/base`中找到你的ipk包了。现在通过SCP拷贝到路由器/tmp/目录，然后用opkg安装即可。
+如果顺利，编译完成之后就能在`trunk/bin/YourArchitecture/packages/base`中找到你的ipk包了。还包含其依赖的libpcap.ipk。如果你的路由器默认没有安装libpcap包，可以一并安装。把软件包通过SCP拷贝到路由器/tmp/目录，然后用opkg安装即可。
 
 安装好后可以立即使用，配置文件在/etc/mentohust.conf，可以自行编辑。
 

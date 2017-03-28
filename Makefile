@@ -23,7 +23,7 @@ define Package/mentohust
   CATEGORY:=Network
   DEPENDS:=+libpcap
   TITLE:=A Ruijie Client Daemon
-  URL:=http://code.google.com/p/evasi0n/
+  URL:=http://code.google.com/p/mentohust/
   SUBMENU:=Ruijie
 endef
 
