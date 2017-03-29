@@ -170,6 +170,10 @@ $ make toolchain/install V=s
 
 不幸的是，我发现Tools和Toolchain的编译十分漫长，等待过程十分痛苦。这是因为需要从网上下载大量的文件，而这些镜像源都不是特别好。为了减少等待的时间，不妨给大家分享一个小技巧。通过研究编译的过程我发现，所需的文件是下载并保存到openwrt目录的dl文件夹下的。通过实验，我发现这个dl文件夹可以移植，只要我们的OpenWrt SDK的版本是差不多的，我们可以直接将已经弄好的dl文件夹放在openwrt目录中，这样可以节省大量时间。编译所需的dl文件夹我均已打包上传，请自行下载。
 
+[------------百度网盘------------](http://pan.baidu.com/s/1o7XKxRk)
+
+下载后，提取压缩包到openwrt 目录，然后可以删掉该压缩包。
+
 同样地，不建议直接将形如http://downloads.openwrt.org/snapshots/trunk/ramips/OpenWrt-Toolchain-ramips-for-mipsel_24kec%2bdsp-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2的这种文件解压后直接应用于我们的toolchain，因为省略了编译安装过程，后面可能会发生意想不到的错误。dl文件夹我已经提供给大家，Toolchain的编译已经不需要太长时间。不要因小失大。
 
 ## Compile
