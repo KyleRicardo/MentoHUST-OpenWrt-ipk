@@ -1,7 +1,7 @@
 #
 # Copyright (C) 2014-2015 KyleRicardo
 #
-# This is free software, licensed under the GNU General Public License v2.
+# This is free software, licensed under the GNU General Public License v3.
 # See /LICENSE for more information.
 #
 
@@ -23,7 +23,7 @@ define Package/mentohust
   CATEGORY:=Network
   DEPENDS:=+libpcap
   TITLE:=A Ruijie Client Daemon
-  URL:=http://code.google.com/p/mentohust/
+  URL:=https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git
   SUBMENU:=Ruijie
 endef
 
@@ -31,11 +31,6 @@ define Package/mentohust/description
 A Ruijie Client Daemon,
 Most usually used in China collages.
 endef
-
-CONFIGURE_ARGS += \
-	--disable-encodepass \
-	--disable-notify
-
 
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
@@ -58,8 +53,8 @@ define Build/Compile
 endef
 
 define Package/mentohust/install
-	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/mentohust $(1)/usr/bin/
+	$(INSTALL_DIR) $(1)/usr/sbin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/mentohust $(1)/usr/sbin/
 	$(INSTALL_DIR) $(1)/etc
 	$(INSTALL_CONF) $(PKG_BUILD_DIR)/mentohust.conf $(1)/etc/mentohust.conf
 
