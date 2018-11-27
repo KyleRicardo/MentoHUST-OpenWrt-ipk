@@ -202,6 +202,7 @@ opkg install mentohust_0.3.1-1_ramips_24kec.ipk
 ```
 
 这时有可能会出现这种情况：
+
 ![arch-mismatch](https://ws4.sinaimg.cn/large/8832d37agy1fxkpfctgj9j20ir0btmxg.jpg)
 
 遇到这种错误，需要修改/etc/opkg.conf文件，对于小米Mini，需要在其尾部追加：
