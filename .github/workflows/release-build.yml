@@ -48,7 +48,7 @@ jobs:
           fetch-depth: 0
 
       - name: Building packages
-        uses: openwrt/gh-action-sdk@master
+        uses: openwrt/gh-action-sdk@main
         env:
           ARCH: ${{ matrix.arch }}-openwrt-21.02
           FEEDNAME: packages_ci
